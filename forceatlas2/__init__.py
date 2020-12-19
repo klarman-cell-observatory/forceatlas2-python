@@ -2,6 +2,17 @@ import os, pkg_resources
 import pandas as pd
 from subprocess import check_call
 
+try:
+    from importlib.metadata import version, PackageNotFoundError
+except ImportError:  # < Python 3.8: Use backport module
+    from importlib_metadata import version, PackageNotFoundError
+
+try:
+    __version__ = version(__name__)
+    del version
+except PackageNotFoundError:
+    pass
+
 
 def forceatlas2(file_name, graph, n_jobs, target_change_per_node, target_steps, is3d, memory, random_state, init):
     input_graph_file = "{file_name}.net".format(file_name=file_name)

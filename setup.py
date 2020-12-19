@@ -8,29 +8,27 @@ with open(path.join(here, "README.rst"), encoding="utf-8") as f:
 
 requires = [
     "pandas>=0.21",
+    "importlib_metadata>=0.7; python_version < '3.8'",
 ]
 
 setup(
     name="forceatlas2-python",
-    version='1.0',
+    use_scm_version=True,
     description="scRNA-Seq analysis tools that scale to millions of cells",
     long_description=long_description,
     url="https://github.com/klarman-cell-observatory/forceatlas2-python",
     author="Joshua Gould, Yiming Yang, Bo Li",
-    author_email="sccloud@googlegroups.com, sccloud@broadinstitute.org",
+    author_email="cumulus-support@googlegroups.com",
     classifiers=[  # https://pypi.python.org/pypi?%3Aaction=list_classifiers
-        "Development Status :: 3 - Alpha",
+        "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
         "Intended Audience :: Science/Research",
-        "Topic :: Software Development :: Build Tools",
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
-        "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.5",
-        "Programming Language :: Python :: 3.6",
-        "Programming Language :: Python :: 3.7",
         "Natural Language :: English",
         "Operating System :: MacOS :: MacOS X",
         "Operating System :: POSIX :: Linux",
+        "Programming Language :: Python :: 3",
+        "Topic :: Software Development :: Build Tools",
         "Topic :: Scientific/Engineering :: Bio-Informatics",
     ],
     keywords="Force Directed Layout",
