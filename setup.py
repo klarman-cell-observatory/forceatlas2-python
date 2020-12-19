@@ -34,6 +34,7 @@ setup(
     keywords="Force Directed Layout",
     packages=find_packages(),
     install_requires=requires,
+    setup_requires=['setuptools_scm'],
     python_requires="~=3.5",
     package_data={
         "forceatlas2": ["ext/forceatlas2.jar", "ext/gephi-toolkit-0.9.2-all.jar"]
