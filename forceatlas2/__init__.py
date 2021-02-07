@@ -22,7 +22,7 @@ def forceatlas2(file_name, graph, n_jobs, target_change_per_node, target_steps, 
 
     classpath = (
             pkg_resources.resource_filename("forceatlas2", "ext/forceatlas2.jar")
-            + ":"
+            + os.pathsep
             + pkg_resources.resource_filename("forceatlas2", "ext/gephi-toolkit-0.9.2-all.jar")
     )
 
